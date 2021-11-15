@@ -68,3 +68,13 @@ apparently gotta install craco
 check if all packages present and run 
 `npx start`
 
+
+
+What if I streamed until I became a millionaire HUH?
+
+
+I'mma list out all the things I can do, and then work on them every single day.. Let's see how fast I could get to being a millionaire...
+
+Millionaire speed-run perhaps..
+I'll try to get my basic expenditure paid for, but other than that..
+like food and shit..

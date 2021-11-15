@@ -58,3 +58,77 @@ purge: [
 ```
 Unused anything purged.
 If this was getting deployed it would allow very small css file sizes.
+
+
+[clippy css](https://bennettfeely.com/clippy/)
+found this cool CSS svg clipper site
+
+
+for some reason the purge on `tailwind.config.js`? Apparently me missing out the .js file completely screwed it over...
+
+so be sure to include 
+    `'./src/**/*.js',`
+    bruh moment fr
+
+```
+extend: {
+      colors: {
+        primary: '#202225',
+        secondary: '#5865f2',
+        tertiary: '#5865f2',
+      }
+    },
+```
+added this to keep consistent w/ the discord theme.
+
+
+And Apparently Chrome Dev Tools
+`CSS Overview`
+
+![CSS-Overview // Chrome Dev Tools](CSS-overview.png)
+
+
+had to add 
+`const colors = require('tailwindcss/colors')`
+to tailwind.config.js
+
+now we adding icons from a package called 
+`react-icons`
+
+you import them from their corresponding
+`react-icons/{key}`
+
+
+instead of utilizing a utility class, we're using 
+`sidebar-icon` in `SideBar.js`
+but that class is built using tailwind.
+
+
+Now we're wondering how to change state during 
+events
+
+hover and focus and shit
+
+
+Now we work on transition animation
+goes from rounded to squirqle
+`index.css`
+
+
+
+### Animated Tooltip
+`SideBar.js` another prop along w {icon}
+
+you can't hover over invis elements
+this is where we use groups, but groups don't apply very well in `@apply`
+
+
+### Dark Mode.
+super ez to implement
+2 ways to go about it
+- media (prefers color scheme from the browser)
+- class
+
+looks for `dark` class in any parents
+
+custom react hook to manage user preference and use local storage

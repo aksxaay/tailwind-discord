@@ -2,3 +2,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sidebar-icon {
+    @apply 
+      relative flex justify-center items-center
+      h-12 w-12 mt-1 mb-1 mx-auto
+      /* box shadows? */
+      shadow-lg
+      bg-gray-800 text-green-500
+      /* hover state */
+      hover:bg-green-600 hover:text-white
+      /* hover animation */
+      rounded-3xl hover:rounded-2xl
+      transition-all duration-200 ease-linear
+      /* changes it to load animation */
+      cursor-wait
+  }
+
+  .sidebar-tooltip {
+    @apply
+      /* spacing */
+      absolute w-auto p-2 m-2 min-w-max left-14
+      /*  */
+      rounded-xl shadow-md
+      text-white
+      bg-gray-700
+      text-xs
+      transition-all duration-100 scale-0 origin-bottom-left;
+  }
+}
