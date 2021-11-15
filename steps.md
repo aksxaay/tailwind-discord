@@ -142,13 +142,22 @@ this dude's final repo somehow separated files into
 (hook onto, special function that let's you add React State to function components)
 
 `import React, { useState } from 'react';`
+Apparently there's something called 
+`normalize.css`
 
 
 - [] we're also changing App.js -> jsx
 
 
 -[x] SideBar -> index.jsx(added) (syntax extension to js) (native to react)
--[] Dividers
+-[x] Dividers
 
-- [] Channel Bar -> doing basic index.css
+
+- [x] Channel Bar -> doing basic index.css
 - [] Top Navigation
+- TopNavigation
+- ThemeIcon
+- Search
+
+can't resolve ../../hooks/userDarkMode
+`/src/hooks/useDarkMode.jsx`

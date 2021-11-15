@@ -9,6 +9,14 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 dark:bg-green-400;
+}
+
 
 *,
 *::before,
@@ -44,30 +52,90 @@
       absolute w-auto p-2 m-2 min-w-max left-14
       /*  */
       rounded-xl shadow-md
-      text-white
+      dark:text-white
       bg-gray-700
-      bg-opacity-70
+      dark:bg-opacity-70
       text-xs
       transition-all duration-100 scale-0 origin-bottom-left;
   }
 
   .sidebar-hr {
     @apply bg-gray-200 dark:bg-gray-800 
-    border border-gray-200 dark:border-gray-800 rounded-full
-    mx-2;
+    border-t-2 border-gray-200 dark:border-gray-800 rounded-full
+    mx-3;
   }
+
+  /* TopNavigation */
+
+  .top-navigation {
+    @apply flex flex-row items-center justify-evenly 
+    bg-gray-300 dark:bg-gray-700 bg-opacity-90 
+    w-full h-12 
+    m-0 
+    shadow-lg;
+  }
+
+  .top-navigation-icon {
+    @apply text-gray-500
+    mr-3 ml-4
+    transition duration-300 ease-in-out 
+    hover:text-pink-400 
+    cursor-pointer;
+  }
+
+  .top-navigation-icon:first {
+    @apply ml-auto mr-4;
+  }
+
+  /* TopNavigation -> Elements */
+  .title-hashtag {
+    @apply text-lg tracking-wider font-semibold text-gray-500 
+    ml-2 my-auto;
+  }
+
+  .title-text {
+    @apply text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 
+    mr-auto ml-2 my-auto
+    whitespace-nowrap
+    transition duration-300 ease-in-out;
+  }
+
+  .search {
+    @apply w-1/5 flex items-center justify-start 
+    bg-gray-400 dark:bg-gray-600
+    text-gray-500
+    px-2 h-9 ml-0 mr-0 
+    rounded-md shadow-md
+    transition duration-300 ease-in-out;
+  }
+
+  .search-input {
+    @apply w-full font-sans font-semibold
+    bg-transparent outline-none 
+    opacity-60
+    text-gray-500  placeholder-gray-500
+    px-1 rounded
+    focus:opacity-80
+    
+    
+  }
+
 
 
   /* ChannelBar */
 
   .channel-bar {
-    @apply w-80 h-auto m-0 ml-16 bg-gray-200 dark:bg-gray-800
-     overflow-hidden;
+    @apply 
+    w-80 m-0 ml-16 bg-gray-200 dark:bg-gray-800
+    h-screen
+    overflow-auto;
   }
 
   .channel-container {
-    @apply flex flex-col items-center justify-start 
-    p-1 m-0;
+    @apply
+    flex flex-col items-center justify-start 
+    p-1 m-0
+    h-screen;
   }
 
   .channel-block {
@@ -118,7 +186,9 @@
 
     .dropdown-selection-text {
       @apply text-gray-500 font-semibold tracking-wide
-      mr-auto 
+      mr-auto
+      /* nowrap baby lessgo */
+      whitespace-nowrap
       transition duration-300 ease-in-out 
       hover:text-pink-500 dark:hover:text-gray-500
       cursor-pointer;

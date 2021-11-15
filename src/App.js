@@ -2,6 +2,8 @@
 import './App.css';
 import SideBar from './components/SideBar';
 import ChannelBar from './components/ChannelBar';
+import TopNavigation from './components/TopNavigation';
+
 
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
       <SideBar/>
       <ChannelBar/>
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      <TopNavigation/>
     </div>
   );
 }

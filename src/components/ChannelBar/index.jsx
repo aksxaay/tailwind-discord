@@ -43,6 +43,7 @@ const Dropdown = ({ header, selections }) => {
         </h5>
         <FaPlus size='12' className='text-accent text-opacity-80 my-auto ml-auto' />
       </div>
+      {/* select dispay logic */}
       {expanded &&
         selections &&
         selections.map((selection) => <TopicSelection selection={selection} />)}

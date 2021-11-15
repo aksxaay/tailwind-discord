@@ -14,11 +14,12 @@ const SideBar = () => {
                   bg-primary text-white">
 
         <SideBarIcon icon={<FaFire size="28" />} />
-        {/* <Divider /> */}
+        {/* discord line divide */}
+        <Divider />
         <SideBarIcon icon={<BsPlus size="32" />} />
         <SideBarIcon icon={<BsFillLightningFill size="20" />} />
         <SideBarIcon icon={<FaPoo size="20" />} />
-        {/* <Divider /> */}
+        <Divider />
         <SideBarIcon icon={<BsGearFill size="22" />} />
 
     </div>
@@ -35,6 +36,9 @@ const SideBarIcon = ({icon, text = '(shlatt+//-^*)'}) => (
     </span>
   </div> 
 );
+
+// divider
+const Divider = () => <hr className="sidebar-hr" />;
 
 // EXPORTS
 export default SideBar;
