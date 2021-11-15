@@ -1,7 +1,24 @@
 /* ./src/index.css */
+
+
+/* adding a CSS reset */
+/* https://create-react-app.dev/docs/adding-css-reset/ */
+/* @import-normalize */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 
 @layer components {
   /* SideBar */
@@ -29,8 +46,15 @@
       rounded-xl shadow-md
       text-white
       bg-gray-700
+      bg-opacity-70
       text-xs
       transition-all duration-100 scale-0 origin-bottom-left;
+  }
+
+  .sidebar-hr {
+    @apply bg-gray-200 dark:bg-gray-800 
+    border border-gray-200 dark:border-gray-800 rounded-full
+    mx-2;
   }
 
 
@@ -71,13 +95,18 @@
     }
 
     .dropdown-header-text {
-      @apply text-gray-500  text-opacity-90 
+      @apply
+      ml-1
+      text-gray-500  text-opacity-90
       text-lg font-semibold
       cursor-default;
     }
 
     .dropdown-header-text-selected {
-      @apply text-blue-500 text-opacity-90 text-lg font-bold;
+      @apply
+      ml-1
+      text-blue-500 text-opacity-90 text-lg font-bold
+      ;
     }
 
     .dropdown-selection {
