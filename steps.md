@@ -132,3 +132,14 @@ super ez to implement
 looks for `dark` class in any parents
 
 custom react hook to manage user preference and use local storage
+
+
+so uhh now what...
+
+this dude's final repo somehow separated files into
+- components
+- hooks
+
+
+-[] SideBar -> index.jsx(added) (syntax extension to js) (native to react)
+-[] Dividers

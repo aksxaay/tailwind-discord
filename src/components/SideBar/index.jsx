@@ -1,3 +1,5 @@
+// SIDEBAR index.js
+
 
 import {BsPlus, BsFillLightningFill, BsGearFill} from 'react-icons/bs'
 import {FaFire, FaPoo} from 'react-icons/fa'
