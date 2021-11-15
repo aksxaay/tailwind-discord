@@ -138,8 +138,17 @@ so uhh now what...
 
 this dude's final repo somehow separated files into
 - components
-- hooks
+- hooks 
+(hook onto, special function that let's you add React State to function components)
+
+`import React, { useState } from 'react';`
 
 
--[] SideBar -> index.jsx(added) (syntax extension to js) (native to react)
+- [] we're also changing App.js -> jsx
+
+
+-[x] SideBar -> index.jsx(added) (syntax extension to js) (native to react)
 -[] Dividers
+
+- [] Channel Bar -> doing index.css
+- [] Top Navigation
