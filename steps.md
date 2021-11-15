@@ -150,5 +150,5 @@ this dude's final repo somehow separated files into
 -[x] SideBar -> index.jsx(added) (syntax extension to js) (native to react)
 -[] Dividers
 
-- [] Channel Bar -> doing index.css
+- [] Channel Bar -> doing basic index.css
 - [] Top Navigation

@@ -14,14 +14,34 @@ const ChannelBar = () => {
     <div className='channel-bar shadow-lg'>
       <ChannelBlock />
       <div className='channel-container'>
-        {/* <Dropdown header='Topics' selections={topics} />
+        <Dropdown header='Topics' selections={topics} />
         <Dropdown header='Questions' selections={questions} />
-        <Dropdown header='Random' selections={random} /> */}
+        <Dropdown header='Random' selections={random} />
       </div>
     </div>
   );
 };
 
+const Dropdown = ({ header, selections }) => {
+  const [expanded, setExpanded] = useState(true);
+
+  return (
+    <div className='dropdown'>
+      <div onClick={() => setExpanded(!expanded)} className='dropdown-header'>
+        {/* <ChevronIcon expanded={expanded} /> */}
+        <h5
+          className={expanded ? 'dropdown-header-text-selected' : 'dropdown-header-text'}
+        >
+          {header}
+        </h5>
+        <FaPlus size='12' className='text-accent text-opacity-80 my-auto ml-auto' />
+      </div>
+      {/* {expanded &&
+        selections &&
+        selections.map((selection) => <TopicSelection selection={selection} />)} */}
+    </div>
+  );
+};
 
 const ChannelBlock = () => (
   <div className='channel-block'>
