@@ -3,6 +3,7 @@ import './App.css';
 import SideBar from './components/SideBar';
 import ChannelBar from './components/ChannelBar';
 import TopNavigation from './components/TopNavigation';
+import ContentContainer from './components/ContentContainer';
 
 
 
@@ -12,7 +13,9 @@ function App() {
       <SideBar/>
       <ChannelBar/>
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <TopNavigation/>
+      {/* so somehow they decided that they're going to include TopNavigation in ContentContainers */}
+      {/* <TopNavigation/> */}
+      <ContentContainer/>
     </div>
   );
 }
