@@ -36,7 +36,7 @@
       h-12 w-12 mt-1 mb-1 mx-auto
       /* box shadows? */
       shadow-lg
-      bg-gray-800 text-green-500
+      dark:bg-gray-800 text-green-500
       /* hover state */
       hover:bg-green-600 hover:text-white
       /* hover animation */
@@ -71,13 +71,12 @@
     @apply flex flex-row items-center justify-evenly 
     bg-gray-300 dark:bg-gray-700 bg-opacity-90 
     w-full h-12 
-    m-0 
     shadow-lg;
   }
 
   .top-navigation-icon {
     @apply text-gray-500
-    mr-3 ml-4
+    mx-3
     transition duration-300 ease-in-out 
     hover:text-pink-400 
     cursor-pointer;
@@ -90,13 +89,15 @@
   /* TopNavigation -> Elements */
   .title-hashtag {
     @apply text-lg tracking-wider font-semibold text-gray-500 
-    ml-2 my-auto;
+    mx-2 my-auto;
   }
 
   .title-text {
     @apply text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 
-    mr-auto ml-2 my-auto
+    mr-auto my-auto
     whitespace-nowrap
+    overflow-hidden
+    overflow-ellipsis
     transition duration-300 ease-in-out;
   }
 
@@ -104,7 +105,8 @@
     @apply w-1/5 flex items-center justify-start 
     bg-gray-400 dark:bg-gray-600
     text-gray-500
-    px-2 h-9 ml-0 mr-0 
+    px-2 h-9 
+    mx-2 
     rounded-md shadow-md
     transition duration-300 ease-in-out;
   }
@@ -116,6 +118,7 @@
     text-gray-500  placeholder-gray-500
     px-1 rounded
     focus:opacity-80
+    overflow-ellipsis
     
     
   }
@@ -126,21 +129,27 @@
 
   .channel-bar {
     @apply 
-    w-80 m-0 ml-16 bg-gray-200 dark:bg-gray-800
-    h-screen
+    w-80 m-0 ml-16 bg-gray-100 dark:bg-gray-700
+    h-auto
+    overflow-auto
+    truncate
     /* overflow-auto; */
+    
   }
 
   .channel-container {
     @apply
-    flex flex-col items-center justify-start 
+    flex flex-col items-center justify-start
     p-1 m-0
     max-h-screen;
   }
 
   .channel-block {
     @apply flex items-center justify-center 
-    h-16 
+    h-12
+    bg-gray-200
+    dark:bg-gray-700
+    rounded-tl-lg
     m-0 p-0;
   }
 
@@ -208,16 +217,17 @@
 
     .content-list {
       @apply flex flex-col items-center 
-      h-full w-full 
+      h-full w-full
+      justify-items-start
       mt-0 ml-0 mx-auto px-0 pb-12 
       overflow-y-scroll;
     }
 
     .post {
       @apply w-full
-      flex flex-row items-center justify-evenly
+      flex flex-row justify-evenly
       py-4 px-8 m-0
-      cursor-pointer;
+      cursor-default;
     }
     .post-selected {
       @apply bg-green-400 dark:bg-gray-900
@@ -226,8 +236,7 @@
 
     .post-content {
       @apply w-4/5 
-      flex flex-col justify-start 
-      ml-auto;
+      flex flex-col justify-start ;
     }
   
     .post-text {
@@ -240,9 +249,10 @@
     }
   
     .avatar-wrapper {
-      @apply flex flex-col items-center
+      @apply flex flex-row
+      relative
       w-12 
-      m-0 ml-auto mb-auto;
+      m-0 mb-auto;
     }
   
     .avatar {
